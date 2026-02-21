@@ -57,7 +57,7 @@ export const projects = [
   },
   {
     id: 2,
-    title: "Luxury Villa Construction",
+    title: "Luxury Bungalow Construction",
     location: "Pune",
     image: "https://customer-assets.emergentagent.com/job_buildpro-hub-16/artifacts/ap27nrdc_WhatsApp%20Image%202026-02-21%20at%2009.07.12%20%282%29.jpeg"
   },
@@ -69,9 +69,9 @@ export const projects = [
   },
   {
     id: 4,
-    title: "Contemporary Home Design",
+    title: "3D Design Elevation",
     location: "Pune",
-    image: "https://customer-assets.emergentagent.com/job_buildpro-hub-16/artifacts/sfb5sw70_WhatsApp%20Image%202026-02-21%20at%2009.07.12.jpeg"
+    image: "https://images.pexels.com/photos/15764116/pexels-photo-15764116.jpeg"
   },
   {
     id: 5,

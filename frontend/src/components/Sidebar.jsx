@@ -95,11 +95,17 @@ const Sidebar = () => {
           {/* Logo Section */}
           <div className="p-6 border-b border-slate-700">
             <div className={`flex items-center justify-center ${!isExpanded && !isMobile ? 'justify-center' : ''}`}>
-              <img 
-                src="https://customer-assets.emergentagent.com/job_buildpro-hub-16/artifacts/j8vihe3v_image.png" 
-                alt="Anand Enterprises Logo" 
-                className={`${isExpanded || isMobile ? 'w-40' : 'w-12'} transition-all duration-300`}
-              />
+              <div className="relative">
+                <img 
+                  src="https://customer-assets.emergentagent.com/job_buildpro-hub-16/artifacts/j8vihe3v_image.png" 
+                  alt="Anand Enterprises Logo" 
+                  className={`${isExpanded || isMobile ? 'w-44' : 'w-14'} transition-all duration-300 drop-shadow-2xl`}
+                  style={{
+                    filter: 'drop-shadow(0 10px 20px rgba(0, 0, 0, 0.5)) drop-shadow(0 4px 8px rgba(245, 158, 11, 0.3))',
+                    imageRendering: 'crisp-edges'
+                  }}
+                />
+              </div>
             </div>
           </div>
 

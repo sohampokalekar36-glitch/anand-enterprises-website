@@ -2,7 +2,7 @@
 
 export const businessInfo = {
   name: "ANAND ENTERPRISES",
-  tagline: "Complete Construction & Interior Solutions",
+  tagline: "Expert Civil Engineering for Turnkey Construction & Interior Solutions",
   phones: ["+91 9175615999", "+91 9175412525"],
   whatsapp: "+91 9175615999",
   email: "constructionanand10@gmail.com",

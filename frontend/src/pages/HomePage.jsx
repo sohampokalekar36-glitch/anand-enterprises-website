@@ -512,7 +512,7 @@ const HomePage = () => {
       {/* Footer */}
       <footer className="bg-slate-950 text-slate-400 py-12">
         <div className="max-w-7xl mx-auto px-6">
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-8">
             <div>
               <h3 className="text-white font-bold text-xl mb-4">{businessInfo.name}</h3>
               <p className="text-slate-400 mb-4">{businessInfo.tagline}</p>
@@ -524,16 +524,6 @@ const HomePage = () => {
                 <p>{businessInfo.phones[1]}</p>
                 <p>{businessInfo.email}</p>
               </div>
-            </div>
-            <div>
-              <h4 className="text-white font-semibold mb-4">Follow Us</h4>
-              <button
-                onClick={handleInstagram}
-                className="flex items-center gap-2 text-amber-400 hover:text-amber-300 transition-colors"
-              >
-                <Instagram size={20} />
-                <span>Instagram</span>
-              </button>
             </div>
           </div>
           <div className="border-t border-slate-800 pt-8 text-center text-slate-500">

@@ -181,6 +181,13 @@ const HomePage = () => {
               <Mail size={18} />
               <span>{businessInfo.email}</span>
             </button>
+            <button
+              onClick={() => window.open('https://www.instagram.com/anand_enterprices_pune', '_blank')}
+              className="flex items-center gap-2 hover:text-amber-400 transition-colors"
+            >
+              <Instagram size={18} />
+              <span>Follow Us</span>
+            </button>
           </div>
         </div>
       </section>

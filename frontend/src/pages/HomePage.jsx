@@ -181,13 +181,6 @@ const HomePage = () => {
               <Mail size={18} />
               <span>{businessInfo.email}</span>
             </button>
-            <button
-              onClick={handleInstagram}
-              className="flex items-center gap-2 hover:text-amber-400 transition-colors"
-            >
-              <Instagram size={18} />
-              <span>Follow Us</span>
-            </button>
           </div>
         </div>
       </section>

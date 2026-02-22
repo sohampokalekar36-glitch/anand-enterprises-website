@@ -63,18 +63,36 @@ export const projects = [
   },
   {
     id: 3,
-    title: "Ongoing Project - Modern Villa",
+    title: "RCC Project - Structural Work",
     location: "Pune",
-    image: "https://customer-assets.emergentagent.com/job_buildpro-hub-16/artifacts/oiltjroy_WhatsApp%20Image%202026-02-21%20at%2012.13.14.jpeg"
+    image: "https://customer-assets.emergentagent.com/job_buildpro-hub-16/artifacts/gihulwrf_WhatsApp%20Image%202026-02-21%20at%2009.07.10.jpeg"
   },
   {
     id: 4,
+    title: "Modern Villa Design",
+    location: "Pune",
+    image: "https://customer-assets.emergentagent.com/job_buildpro-hub-16/artifacts/gns9rlxa_WhatsApp%20Image%202026-02-22%20at%2010.35.22.jpeg"
+  },
+  {
+    id: 5,
+    title: "Contemporary Elevation Design",
+    location: "Pune",
+    image: "https://customer-assets.emergentagent.com/job_buildpro-hub-16/artifacts/zzqn48bw_WhatsApp%20Image%202026-02-22%20at%2010.35.21%20%281%29.jpeg"
+  },
+  {
+    id: 6,
+    title: "Luxury Residence Elevation",
+    location: "Pune",
+    image: "https://customer-assets.emergentagent.com/job_buildpro-hub-16/artifacts/5j2hdw2v_WhatsApp%20Image%202026-02-22%20at%2010.35.21.jpeg"
+  },
+  {
+    id: 7,
     title: "Ongoing Project - Contemporary Home",
     location: "Pune",
     image: "https://customer-assets.emergentagent.com/job_buildpro-hub-16/artifacts/aew4at2l_WhatsApp%20Image%202026-02-21%20at%2012.12.28.jpeg"
   },
   {
-    id: 5,
+    id: 8,
     title: "Multi-Story Residence",
     location: "Pune",
     image: "https://customer-assets.emergentagent.com/job_buildpro-hub-16/artifacts/uumniwoq_WhatsApp%20Image%202026-02-21%20at%2009.07.11%20%282%29.jpeg"

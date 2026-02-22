@@ -107,7 +107,7 @@ export const pricingPackages = [
       "Premium finishing & textures",
       "Designer tiles & flooring",
       "Modular kitchen base",
-      "2-year warranty"
+      "1-year warranty"
     ],
     popular: true
   },
@@ -123,7 +123,7 @@ export const pricingPackages = [
       "Premium imported tiles",
       "Complete modular kitchen",
       "Designer false ceiling",
-      "3-year warranty"
+      "1-year warranty"
     ],
     popular: false
   }

@@ -65,7 +65,11 @@ const HomePage = () => {
   };
 
   const handleEmail = () => {
-    window.open(`mailto:constructionanand10@gmail.com`, '_self');
+    const mailtoLink = document.createElement('a');
+    mailtoLink.href = 'mailto:constructionanand10@gmail.com';
+    mailtoLink.target = '_blank';
+    mailtoLink.rel = 'noopener noreferrer';
+    mailtoLink.click();
     // Track email click
     if (window.gtag) {
       window.gtag('event', 'email_click', { email: 'constructionanand10@gmail.com' });

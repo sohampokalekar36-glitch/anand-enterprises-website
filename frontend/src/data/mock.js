@@ -78,12 +78,6 @@ export const projects = [
     title: "Multi-Story Residence",
     location: "Pune",
     image: "https://customer-assets.emergentagent.com/job_buildpro-hub-16/artifacts/uumniwoq_WhatsApp%20Image%202026-02-21%20at%2009.07.11%20%282%29.jpeg"
-  },
-  {
-    id: 6,
-    title: "Commercial Building - Anand Enterprises",
-    location: "Pune",
-    image: "https://customer-assets.emergentagent.com/job_buildpro-hub-16/artifacts/vheizl2e_image.png"
   }
 ];
 

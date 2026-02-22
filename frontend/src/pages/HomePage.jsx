@@ -65,7 +65,11 @@ const HomePage = () => {
   };
 
   const handleEmail = () => {
-    window.location.href = `mailto:${businessInfo.email}`;
+    window.open(`mailto:constructionanand10@gmail.com`, '_self');
+    // Track email click
+    if (window.gtag) {
+      window.gtag('event', 'email_click', { email: 'constructionanand10@gmail.com' });
+    }
   };
 
   const handleSubmit = (e) => {

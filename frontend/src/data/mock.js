@@ -6,7 +6,7 @@ export const businessInfo = {
   phones: ["+91 9175615999", "+91 9175412525"],
   whatsapp: "+91 9175615999",
   email: "constructionanand10@gmail.com",
-  instagram: "https://www.instagram.com/anand_construction_pune"
+  instagram: "https://www.instagram.com/anand_enterprices_pune"
 };
 
 export const services = [

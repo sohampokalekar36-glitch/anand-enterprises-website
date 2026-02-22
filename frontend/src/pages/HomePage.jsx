@@ -142,6 +142,15 @@ const HomePage = () => {
               <MessageCircle className="mr-2" size={20} />
               WhatsApp
             </Button>
+            <Button
+              size="lg"
+              variant="outline"
+              className="bg-blue-500 hover:bg-blue-600 text-white border-blue-500 shadow-lg hover:shadow-xl transform hover:-translate-y-1 transition-all duration-300"
+              onClick={handleEmail}
+            >
+              <Mail className="mr-2" size={20} />
+              Email Us
+            </Button>
           </div>
 
           {/* Contact Info */}

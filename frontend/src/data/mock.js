@@ -1,7 +1,7 @@
-// Mock data for ANAND CONSTRUCTION website
+// Mock data for ANAND ENTERPRISES website
 
 export const businessInfo = {
-  name: "ANAND CONSTRUCTION",
+  name: "ANAND ENTERPRISES",
   tagline: "Complete Construction & Interior Solutions",
   phones: ["+91 9175615999", "+91 9175412525"],
   whatsapp: "+91 9175615999",

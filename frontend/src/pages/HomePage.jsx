@@ -15,11 +15,12 @@ const iconMap = {
 
 const HomePage = () => {
   const [formData, setFormData] = useState({
-    name: '',
-    email: '',
-    phone: '',
-    message: ''
+    Name: '',
+    Email: '',
+    Phone: '',
+    Description: ''
   });
+  const [isSubmitting, setIsSubmitting] = useState(false);
   const [isVisible, setIsVisible] = useState({});
 
   useEffect(() => {
@@ -73,28 +74,40 @@ const HomePage = () => {
     }
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
+    setIsSubmitting(true);
     
-    // Mock email implementation - save to localStorage
-    const existingContacts = JSON.parse(localStorage.getItem('contactSubmissions') || '[]');
-    const newContact = {
-      ...formData,
-      timestamp: new Date().toISOString(),
-      id: Date.now()
-    };
-    existingContacts.push(newContact);
-    localStorage.setItem('contactSubmissions', JSON.stringify(existingContacts));
+    try {
+      const formDataToSend = new FormData();
+      formDataToSend.append('Name', formData.Name);
+      formDataToSend.append('Email', formData.Email);
+      formDataToSend.append('Phone', formData.Phone);
+      formDataToSend.append('Description', formData.Description);
 
-    toast.success('Thank you! We will contact you soon.');
+      const response = await fetch('https://script.google.com/macros/s/AKfycby-TuHrww_u8kVv2pVJ4W4ITysJJmTHBpJHjFIDuLqjlzlWsuJEcGrZEkj9jU3RgKjt/exec', {
+        method: 'POST',
+        body: formDataToSend
+      });
+
+      if (response.ok) {
+        toast.success('Thank you! We will contact you soon.');
+        // Reset form
+        setFormData({ Name: '', Email: '', Phone: '', Description: '' });
+      } else {
+        toast.error('Something went wrong. Please try again or contact us directly.');
+      }
+    } catch (error) {
+      console.error('Form submission error:', error);
+      toast.error('Failed to send message. Please try again or contact us directly.');
+    } finally {
+      setIsSubmitting(false);
+    }
     
     // Track form submission
     if (window.gtag) {
       window.gtag('event', 'form_submission', { form_name: 'contact_form' });
     }
-
-    // Reset form
-    setFormData({ name: '', email: '', phone: '', message: '' });
   };
 
   const handleChange = (e) => {
@@ -418,11 +431,11 @@ const HomePage = () => {
             <CardContent className="p-8">
               <form onSubmit={handleSubmit} className="space-y-6">
                 <div>
-                  <Label htmlFor="name" className="text-slate-700">Full Name *</Label>
+                  <Label htmlFor="Name" className="text-slate-700">Full Name *</Label>
                   <Input
-                    id="name"
-                    name="name"
-                    value={formData.name}
+                    id="Name"
+                    name="Name"
+                    value={formData.Name}
                     onChange={handleChange}
                     required
                     className="mt-2"
@@ -431,12 +444,12 @@ const HomePage = () => {
                 </div>
 
                 <div>
-                  <Label htmlFor="email" className="text-slate-700">Email Address *</Label>
+                  <Label htmlFor="Email" className="text-slate-700">Email Address *</Label>
                   <Input
-                    id="email"
-                    name="email"
+                    id="Email"
+                    name="Email"
                     type="email"
-                    value={formData.email}
+                    value={formData.Email}
                     onChange={handleChange}
                     required
                     className="mt-2"
@@ -445,12 +458,12 @@ const HomePage = () => {
                 </div>
 
                 <div>
-                  <Label htmlFor="phone" className="text-slate-700">Phone Number *</Label>
+                  <Label htmlFor="Phone" className="text-slate-700">Phone Number *</Label>
                   <Input
-                    id="phone"
-                    name="phone"
+                    id="Phone"
+                    name="Phone"
                     type="tel"
-                    value={formData.phone}
+                    value={formData.Phone}
                     onChange={handleChange}
                     required
                     className="mt-2"
@@ -459,11 +472,11 @@ const HomePage = () => {
                 </div>
 
                 <div>
-                  <Label htmlFor="message" className="text-slate-700">Message *</Label>
+                  <Label htmlFor="Description" className="text-slate-700">Message *</Label>
                   <Textarea
-                    id="message"
-                    name="message"
-                    value={formData.message}
+                    id="Description"
+                    name="Description"
+                    value={formData.Description}
                     onChange={handleChange}
                     required
                     rows={5}
@@ -475,9 +488,10 @@ const HomePage = () => {
                 <Button
                   type="submit"
                   size="lg"
-                  className="w-full bg-amber-500 hover:bg-amber-600 text-white shadow-lg hover:shadow-xl transform hover:-translate-y-1 transition-all duration-300"
+                  disabled={isSubmitting}
+                  className="w-full bg-amber-500 hover:bg-amber-600 text-white shadow-lg hover:shadow-xl transform hover:-translate-y-1 transition-all duration-300 disabled:opacity-50 disabled:cursor-not-allowed"
                 >
-                  Send Message
+                  {isSubmitting ? 'Sending...' : 'Send Message'}
                   <ArrowRight className="ml-2" size={18} />
                 </Button>
               </form>

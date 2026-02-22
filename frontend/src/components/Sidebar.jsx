@@ -94,13 +94,12 @@ const Sidebar = () => {
         <div className="flex flex-col h-full">
           {/* Logo Section */}
           <div className="p-6 border-b border-slate-700">
-            <div className={`flex items-center gap-3 ${!isExpanded && !isMobile ? 'justify-center' : ''}`}>
-              <div className="bg-amber-500 p-2 rounded-lg shadow-lg">
-                <Home size={24} className="text-white" />
-              </div>
-              {(isExpanded || isMobile) && (
-                <span className="text-white font-bold text-lg whitespace-nowrap">ANAND</span>
-              )}
+            <div className={`flex items-center justify-center ${!isExpanded && !isMobile ? 'justify-center' : ''}`}>
+              <img 
+                src="https://customer-assets.emergentagent.com/job_buildpro-hub-16/artifacts/j8vihe3v_image.png" 
+                alt="Anand Enterprises Logo" 
+                className={`${isExpanded || isMobile ? 'w-40' : 'w-12'} transition-all duration-300`}
+              />
             </div>
           </div>
 

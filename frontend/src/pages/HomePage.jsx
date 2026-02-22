@@ -65,7 +65,12 @@ const HomePage = () => {
   };
 
   const handleEmail = () => {
-    window.location.href = 'mailto:constructionanand10@gmail.com';
+    // Open Gmail compose in browser
+    window.open('https://mail.google.com/mail/?view=cm&to=constructionanand10@gmail.com', '_blank');
+    // Track email click
+    if (window.gtag) {
+      window.gtag('event', 'email_click', { email: 'constructionanand10@gmail.com' });
+    }
   };
 
   const handleSubmit = (e) => {
